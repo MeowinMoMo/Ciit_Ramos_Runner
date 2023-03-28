@@ -10,7 +10,8 @@ public class DiceScripts : MonoBehaviour
     bool thrown;
     int diceValue;
 
-    [SerializeField] Diceside[] _ds;
+    public Player playervalue;
+    [SerializeField] public Diceside[] _ds;
 
 
 
@@ -29,6 +30,11 @@ public class DiceScripts : MonoBehaviour
         { 
             RollDice();
         }
+        /*if (Input.GetKeyDown(KeyCode.E))
+        {
+            Reset();
+            RollDice();
+        }*/
     }
 
     void RollDice()
@@ -37,6 +43,7 @@ public class DiceScripts : MonoBehaviour
         {
             thrown = true;
             rb.useGravity = true;
+            hasLanded = true;
             rb.AddTorque(
                 Random.Range(25, 100),
                 Random.Range(25, 100),
@@ -58,4 +65,18 @@ public class DiceScripts : MonoBehaviour
         rb.isKinematic = false;
     }
 
+    void SideValueChecker()
+    {
+        int sideValue = 0;
+        foreach (var side in _ds)
+        {
+            if(side.onGround())
+            {
+                diceValue = side.SideValue;
+                playervalue.numJump = diceValue;
+            }
+        }
+        diceValue=0;
+
+    }
 }
