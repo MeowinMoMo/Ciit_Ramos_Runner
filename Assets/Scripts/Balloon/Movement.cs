@@ -6,6 +6,8 @@ public class Movement : MonoBehaviour
 {
     public float Speed;
     public float SideSpeed;
+    public GameObject Ballon;
+    public int collectables;
 
     void Start() {
 
@@ -20,4 +22,6 @@ public class Movement : MonoBehaviour
             transform.position += Vector3.left * SideSpeed * Time.deltaTime;
         }
     }
+
+
 }
