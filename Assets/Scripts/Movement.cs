@@ -7,7 +7,11 @@ public class Movement : MonoBehaviour
     public float Speed;
     public float SideSpeed;
     public GameObject Ballons;
+<<<<<<< Updated upstream:Assets/Scripts/Movement.cs
     public int Collected;
+=======
+    public int collect;
+>>>>>>> Stashed changes:Assets/Scripts/Balloon/Movement.cs
 
     void Start() {
 
@@ -22,7 +26,10 @@ public class Movement : MonoBehaviour
             transform.position += Vector3.left * SideSpeed * Time.deltaTime;
         }
     }
+<<<<<<< Updated upstream:Assets/Scripts/Movement.cs
 
     public void Collected;
 
+=======
+>>>>>>> Stashed changes:Assets/Scripts/Balloon/Movement.cs
 }
