@@ -67,7 +67,7 @@ public class DiceScripts : MonoBehaviour
 
     void SideValueChecker()
     {
-        int sideValue = 0;
+        int diceValue = 0;
         foreach (var side in _ds)
         {
             if(side.onGround())
@@ -76,7 +76,7 @@ public class DiceScripts : MonoBehaviour
                 playervalue.numJump = diceValue;
             }
         }
-        diceValue=0;
+        diceValue = 0;
 
     }
 }
