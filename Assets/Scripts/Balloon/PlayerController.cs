@@ -28,7 +28,6 @@ public class PlayerController : MonoBehaviour
         else if (other.gameObject.CompareTag("Obstacle"))
         {
             RemoveBodyPart();
-            Debug.Log("Bodypart removed");
         }
         else if (other.gameObject.CompareTag("Portal"))
         {
@@ -68,7 +67,7 @@ public class PlayerController : MonoBehaviour
         else
         {
             isComplete = false;
-            animator.Play("Idle");
+            animator.Play("Death");
         }
     }
 
