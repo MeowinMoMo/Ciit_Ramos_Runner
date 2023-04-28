@@ -4,29 +4,47 @@ using UnityEngine;
 
 public class Diceside : MonoBehaviour
 {
-    bool OnGround;
-    public int SideValue;
+    bool onGround;
+    bool ShowDiceResultOnce = true;
+    bool CallFunctionOnce = true;
+    private float TimeOnGround = 0f;
+    private float TimeonGroundCheck = 2f;
+    public int DiceValue;
 
+    private void Start()
+    {
+
+    }
     private void OnTriggerStay(Collider other)
     {
-        if (other.tag == "Ground")
+        if (other.gameObject.tag == "Ground")
         {
-            OnGround = true;
+            onGround = true;
+            TimeOnGround += Time.deltaTime;
+            if (TimeOnGround > TimeonGroundCheck && ShowDiceResultOnce)
+            {
+                if (CallFunctionOnce)
+                {
+                    Debug.Log("Value is: " + DiceValue);
+                    MovingPlay.instance.MovePlayerFromDiceNumber(DiceValue);
+                    ShowDiceResultOnce = false;
+                    CallFunctionOnce = false;
+                }
+            }
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.tag == "Ground")
+        if (other.gameObject.tag == "Ground")
         {
-            OnGround = false;
+            onGround = false;
+            TimeOnGround = 0f;
         }
     }
 
-
-    public bool onGround()
+    private bool OnGround()
     {
-        return OnGround;
+        return onGround;
     }
-    
 }

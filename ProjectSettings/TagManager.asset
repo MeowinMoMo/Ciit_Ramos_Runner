@@ -8,6 +8,8 @@ TagManager:
   - Portal
   - Obstacle
   - Collectible
+  - PlayerBalloon
+  - WayPoints
   layers:
   - Default
   - TransparentFX

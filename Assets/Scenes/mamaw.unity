@@ -138,7 +138,7 @@ GameObject:
   - component: {fileID: 71719543}
   m_Layer: 0
   m_Name: Tile22
-  m_TagString: Untagged
+  m_TagString: WayPoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -246,7 +246,7 @@ GameObject:
   - component: {fileID: 83416426}
   m_Layer: 0
   m_Name: Tile19
-  m_TagString: Untagged
+  m_TagString: WayPoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -397,7 +397,7 @@ GameObject:
   - component: {fileID: 477918603}
   m_Layer: 0
   m_Name: Tile20
-  m_TagString: Untagged
+  m_TagString: WayPoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -640,7 +640,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e660be5ffe2584245baf999af969326a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SideValue: 3
+  DiceValue: 3
 --- !u!1 &733719097
 GameObject:
   m_ObjectHideFlags: 0
@@ -656,7 +656,7 @@ GameObject:
   - component: {fileID: 733719102}
   m_Layer: 0
   m_Name: Tile14
-  m_TagString: Untagged
+  m_TagString: WayPoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -764,7 +764,7 @@ GameObject:
   - component: {fileID: 782478526}
   m_Layer: 0
   m_Name: Tile13
-  m_TagString: Untagged
+  m_TagString: WayPoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -872,7 +872,7 @@ GameObject:
   - component: {fileID: 785988833}
   m_Layer: 0
   m_Name: Tile3
-  m_TagString: Untagged
+  m_TagString: WayPoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1114,7 +1114,7 @@ GameObject:
   - component: {fileID: 1008088830}
   m_Layer: 0
   m_Name: Tile2
-  m_TagString: Untagged
+  m_TagString: WayPoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1220,6 +1220,7 @@ GameObject:
   - component: {fileID: 1043217832}
   - component: {fileID: 1043217831}
   - component: {fileID: 1043217835}
+  - component: {fileID: 1043217836}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -1320,6 +1321,45 @@ MonoBehaviour:
   speed: 10
   numJump: 0
   curIndex: 0
+--- !u!114 &1043217836
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1043217830}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57090cc1ca1695e41a32952a3aa21bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Player: {fileID: 1043217830}
+  moveSpeed: 5
+  waypoints:
+  - {fileID: 1641926418}
+  - {fileID: 1972056374}
+  - {fileID: 1008088826}
+  - {fileID: 785988829}
+  - {fileID: 1988805055}
+  - {fileID: 1487684295}
+  - {fileID: 1894526590}
+  - {fileID: 1957872612}
+  - {fileID: 1737871756}
+  - {fileID: 1653239575}
+  - {fileID: 2082845654}
+  - {fileID: 1632291625}
+  - {fileID: 1097024127}
+  - {fileID: 782478522}
+  - {fileID: 733719098}
+  - {fileID: 2107166127}
+  - {fileID: 1304159544}
+  - {fileID: 1639448421}
+  - {fileID: 1209401724}
+  - {fileID: 83416422}
+  - {fileID: 477918599}
+  - {fileID: 1104964593}
+  - {fileID: 71719539}
+  - {fileID: 1265571733}
 --- !u!1 &1046458507 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 3bbbc25881226434b86bd98e9424cd6c,
@@ -1338,7 +1378,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bca9bb0336bbaa4f8746f28bd3b3b1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playervalue: {fileID: 1043217835}
+  ResetPos: {fileID: 0}
+  isLanded: 0
+  isThrown: 0
   _ds:
   - {fileID: 1718958094}
   - {fileID: 1150536608}
@@ -1361,7 +1403,7 @@ GameObject:
   - component: {fileID: 1097024131}
   m_Layer: 0
   m_Name: Tile12
-  m_TagString: Untagged
+  m_TagString: WayPoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1469,7 +1511,7 @@ GameObject:
   - component: {fileID: 1104964597}
   m_Layer: 0
   m_Name: Tile21
-  m_TagString: Untagged
+  m_TagString: WayPoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1704,7 +1746,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e660be5ffe2584245baf999af969326a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SideValue: 5
+  DiceValue: 5
 --- !u!1 &1209401723
 GameObject:
   m_ObjectHideFlags: 0
@@ -1720,7 +1762,7 @@ GameObject:
   - component: {fileID: 1209401728}
   m_Layer: 0
   m_Name: Tile18
-  m_TagString: Untagged
+  m_TagString: WayPoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1828,7 +1870,7 @@ GameObject:
   - component: {fileID: 1265571737}
   m_Layer: 0
   m_Name: Tile23
-  m_TagString: Untagged
+  m_TagString: WayPoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1936,7 +1978,7 @@ GameObject:
   - component: {fileID: 1304159548}
   m_Layer: 0
   m_Name: Tile16
-  m_TagString: Untagged
+  m_TagString: WayPoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2086,7 +2128,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e660be5ffe2584245baf999af969326a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SideValue: 1
+  DiceValue: 1
 --- !u!1 &1487684294
 GameObject:
   m_ObjectHideFlags: 0
@@ -2102,7 +2144,7 @@ GameObject:
   - component: {fileID: 1487684299}
   m_Layer: 0
   m_Name: Tile5
-  m_TagString: Untagged
+  m_TagString: WayPoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2210,7 +2252,7 @@ GameObject:
   - component: {fileID: 1632291629}
   m_Layer: 0
   m_Name: Tile11
-  m_TagString: Untagged
+  m_TagString: WayPoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2318,7 +2360,7 @@ GameObject:
   - component: {fileID: 1639448425}
   m_Layer: 0
   m_Name: Tile17
-  m_TagString: Untagged
+  m_TagString: WayPoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2426,7 +2468,7 @@ GameObject:
   - component: {fileID: 1641926422}
   m_Layer: 0
   m_Name: Tile
-  m_TagString: Untagged
+  m_TagString: WayPoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2534,7 +2576,7 @@ GameObject:
   - component: {fileID: 1653239579}
   m_Layer: 0
   m_Name: Tile9
-  m_TagString: Untagged
+  m_TagString: WayPoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2684,7 +2726,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e660be5ffe2584245baf999af969326a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SideValue: 6
+  DiceValue: 6
 --- !u!1 &1737871755
 GameObject:
   m_ObjectHideFlags: 0
@@ -2700,7 +2742,7 @@ GameObject:
   - component: {fileID: 1737871760}
   m_Layer: 0
   m_Name: Tile8
-  m_TagString: Untagged
+  m_TagString: WayPoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2967,7 +3009,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e660be5ffe2584245baf999af969326a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SideValue: 4
+  DiceValue: 4
 --- !u!1 &1894526589
 GameObject:
   m_ObjectHideFlags: 0
@@ -2983,7 +3025,7 @@ GameObject:
   - component: {fileID: 1894526594}
   m_Layer: 0
   m_Name: Tile6
-  m_TagString: Untagged
+  m_TagString: WayPoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3091,7 +3133,7 @@ GameObject:
   - component: {fileID: 1957872616}
   m_Layer: 0
   m_Name: Tile7
-  m_TagString: Untagged
+  m_TagString: WayPoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3199,7 +3241,7 @@ GameObject:
   - component: {fileID: 1972056378}
   m_Layer: 0
   m_Name: Tile1
-  m_TagString: Untagged
+  m_TagString: WayPoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3307,7 +3349,7 @@ GameObject:
   - component: {fileID: 1988805059}
   m_Layer: 0
   m_Name: Tile4
-  m_TagString: Untagged
+  m_TagString: WayPoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3457,7 +3499,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e660be5ffe2584245baf999af969326a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SideValue: 2
+  DiceValue: 2
 --- !u!1 &2082845653
 GameObject:
   m_ObjectHideFlags: 0
@@ -3473,7 +3515,7 @@ GameObject:
   - component: {fileID: 2082845658}
   m_Layer: 0
   m_Name: Tile10
-  m_TagString: Untagged
+  m_TagString: WayPoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3581,7 +3623,7 @@ GameObject:
   - component: {fileID: 2107166131}
   m_Layer: 0
   m_Name: Tile15
-  m_TagString: Untagged
+  m_TagString: WayPoints
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
