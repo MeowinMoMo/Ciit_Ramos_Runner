@@ -14,7 +14,7 @@ public class Movement : MonoBehaviour
     }
     // Update is called once per frame
     void Update() {
-        transform.position += Vector3.forward * Time.deltaTime;
+        transform.position += Vector3.forward * Speed * Time.deltaTime;
         if (Input.GetKey(KeyCode.D)) {
             transform.position += Vector3.right * SideSpeed * Time.deltaTime;
         }

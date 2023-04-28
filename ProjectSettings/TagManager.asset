@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Ground
+  - Portal
+  - Obstacle
+  - Collectible
   layers:
   - Default
   - TransparentFX
